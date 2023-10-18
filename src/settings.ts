@@ -3,6 +3,9 @@ import type { RecursiveRequired, Settings } from '#/global'
 import settingsDefault from '@/settings.default'
 
 const globalSettings: Settings.all = {
+  toolbar: {
+    enableColorScheme: true,
+  },
   layout: {
     enableMobileAdaptation: true,
   },

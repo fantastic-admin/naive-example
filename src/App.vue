@@ -2,7 +2,7 @@
 import eruda from 'eruda'
 import VConsole from 'vconsole'
 import hotkeys from 'hotkeys-js'
-import { dateZhCN, zhCN } from 'naive-ui'
+import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
 import eventBus from './utils/eventBus'
 import useSettingsStore from '@/store/modules/settings'
 import useMenuStore from '@/store/modules/menu'
@@ -70,7 +70,7 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
 </script>
 
 <template>
-  <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
+  <n-config-provider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
     <n-message-provider>
       <router-view
         v-slot="{ Component, route }"
@@ -83,6 +83,7 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
         <not-allowed v-else />
       </router-view>
       <system-info />
+      <n-global-style />
     </n-message-provider>
   </n-config-provider>
 </template>
