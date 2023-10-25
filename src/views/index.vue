@@ -183,7 +183,7 @@ const pagination = {
 
 <template>
   <div>
-    <page-header>
+    <PageHeader>
       <template #title>
         <div class="flex items-center gap-4">
           欢迎使用 Fantastic-admin
@@ -194,9 +194,9 @@ const pagination = {
           本演示站基于 Fantastic-admin 源码开发，将 Element Plus 替换为 Naive UI ，详细操作步骤请阅读官方文档。
         </div>
       </template>
-    </page-header>
-    <page-main>
-      <n-space>
+    </PageHeader>
+    <PageMain>
+      <NSpace>
         <NButton>Default</NButton>
         <NButton type="tertiary">
           Tertiary
@@ -216,62 +216,62 @@ const pagination = {
         <NButton type="error">
           Error
         </NButton>
-      </n-space>
-    </page-main>
-    <page-main>
-      <n-space vertical>
-        <n-input v-model:value="inputValue" type="text" placeholder="基本的 Input" />
-        <n-input v-model:value="inputValue1" type="textarea" placeholder="基本的 Textarea" />
-      </n-space>
-    </page-main>
-    <page-main>
-      <n-radio-group v-model:value="radioValue">
-        <n-radio :value="1">
+      </NSpace>
+    </PageMain>
+    <PageMain>
+      <NSpace vertical>
+        <NInput v-model:value="inputValue" type="text" placeholder="基本的 Input" />
+        <NInput v-model:value="inputValue1" type="textarea" placeholder="基本的 Textarea" />
+      </NSpace>
+    </PageMain>
+    <PageMain>
+      <NRadioGroup v-model:value="radioValue">
+        <NRadio :value="1">
           A
-        </n-radio>
-        <n-radio :value="2">
+        </NRadio>
+        <NRadio :value="2">
           B
-        </n-radio>
-        <n-radio :value="3">
+        </NRadio>
+        <NRadio :value="3">
           C
-        </n-radio>
-        <n-radio :value="4">
+        </NRadio>
+        <NRadio :value="4">
           D
-        </n-radio>
-      </n-radio-group>
-    </page-main>
-    <page-main>
-      <n-date-picker v-model:value="timestamp" type="date" />
-    </page-main>
-    <page-main>
-      <n-rate v-model:value="rateValue" />
-    </page-main>
-    <page-main>
-      <n-space vertical>
-        <n-select v-model:value="selectValue" :options="selectOptions" />
-        <n-select v-model:value="selectValue" disabled :options="selectOptions" />
-      </n-space>
-    </page-main>
-    <page-main>
-      <n-space vertical>
-        <n-slider v-model:value="sliderValue" :step="10" />
-        <n-input-number v-model:value="sliderValue" size="small" />
-      </n-space>
-    </page-main>
-    <page-main>
-      <n-space>
-        <n-switch v-model:value="switchChecked" />
-        <n-switch v-model:value="switchChecked" disabled />
-      </n-space>
-    </page-main>
-    <page-main>
-      <n-data-table
+        </NRadio>
+      </NRadioGroup>
+    </PageMain>
+    <PageMain>
+      <NDatePicker v-model:value="timestamp" type="date" />
+    </PageMain>
+    <PageMain>
+      <NRate v-model:value="rateValue" />
+    </PageMain>
+    <PageMain>
+      <NSpace vertical>
+        <NSelect v-model:value="selectValue" :options="selectOptions" />
+        <NSelect v-model:value="selectValue" disabled :options="selectOptions" />
+      </NSpace>
+    </PageMain>
+    <PageMain>
+      <NSpace vertical>
+        <NSlider v-model:value="sliderValue" :step="10" />
+        <NInputNumber v-model:value="sliderValue" size="small" />
+      </NSpace>
+    </PageMain>
+    <PageMain>
+      <NSpace>
+        <NSwitch v-model:value="switchChecked" />
+        <NSwitch v-model:value="switchChecked" disabled />
+      </NSpace>
+    </PageMain>
+    <PageMain>
+      <NDataTable
         :bordered="false"
         :single-line="false"
         :columns="columns"
         :data="data"
         :pagination="pagination"
       />
-    </page-main>
+    </PageMain>
   </div>
 </template>

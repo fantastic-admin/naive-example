@@ -2,8 +2,8 @@ import { hex2rgba } from '@unocss/preset-mini/utils'
 
 export const lightTheme = {
   // 内置 UI
-  '--ui-primary': hex2rgba('#0f0f0f')!.join(','),
-  '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+  '--ui-primary': hex2rgba('#0f0f0f')!.join(' '),
+  '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
   // 主体
   '--g-bg': '#f2f2f2',
   '--g-container-bg': '#fff',
@@ -36,8 +36,8 @@ export const lightTheme = {
 
 export const darkTheme = {
   // 内置 UI
-  '--ui-primary': hex2rgba('#e5e5e5')!.join(','),
-  '--ui-text': hex2rgba('#0f0f0f')!.join(','),
+  '--ui-primary': hex2rgba('#e5e5e5')!.join(' '),
+  '--ui-text': hex2rgba('#0f0f0f')!.join(' '),
   // 主体
   '--g-bg': '#0a0a0a',
   '--g-container-bg': '#141414',

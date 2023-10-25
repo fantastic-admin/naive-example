@@ -149,155 +149,155 @@ function testAccount(account: string) {
         <div class="logo shadow" />
         <img :src="banner" class="banner">
       </div>
-      <n-form v-show="formType === 'login'" ref="loginFormRef" :model="loginForm" :rules="loginRules" :show-label="false" class="login-form">
+      <NForm v-show="formType === 'login'" ref="loginFormRef" :model="loginForm" :rules="loginRules" :show-label="false" class="login-form">
         <div class="title-container">
           <h3 class="title">
             欢迎来到 {{ title }} ! 👋🏻
           </h3>
         </div>
         <div>
-          <n-form-item path="account">
-            <n-input v-model:value="loginForm.account" size="large" placeholder="用户名" tabindex="1">
+          <NFormItem path="account">
+            <NInput v-model:value="loginForm.account" size="large" placeholder="用户名" tabindex="1">
               <template #prefix>
-                <svg-icon name="ri:user-3-fill" />
+                <SvgIcon name="ri:user-3-fill" />
               </template>
-            </n-input>
-          </n-form-item>
-          <n-form-item path="password">
-            <n-input v-model:value="loginForm.password" type="password" show-password-on="click" size="large" placeholder="密码" tabindex="2" @keyup.enter="handleLogin">
+            </NInput>
+          </NFormItem>
+          <NFormItem path="password">
+            <NInput v-model:value="loginForm.password" type="password" show-password-on="click" size="large" placeholder="密码" tabindex="2" @keyup.enter="handleLogin">
               <template #prefix>
-                <svg-icon name="ri:lock-2-fill" />
+                <SvgIcon name="ri:lock-2-fill" />
               </template>
-            </n-input>
-          </n-form-item>
+            </NInput>
+          </NFormItem>
         </div>
         <div class="flex-bar">
-          <n-checkbox v-model:checked="loginForm.remember">
+          <NCheckbox v-model:checked="loginForm.remember">
             记住我
-          </n-checkbox>
-          <n-button text type="primary" @click="formType = 'reset'">
+          </NCheckbox>
+          <NButton text type="primary" @click="formType = 'reset'">
             忘记密码了?
-          </n-button>
+          </NButton>
         </div>
-        <n-button :loading="loading" type="primary" size="large" style="width: 100%;" @click.prevent="handleLogin">
+        <NButton :loading="loading" type="primary" size="large" style="width: 100%;" @click.prevent="handleLogin">
           登录
-        </n-button>
+        </NButton>
         <div class="sub-link">
-          <n-space justify="center">
+          <NSpace justify="center">
             <span class="text">还没有帐号?</span>
-            <n-button text type="primary" @click="formType = 'register'">
+            <NButton text type="primary" @click="formType = 'register'">
               创建新帐号
-            </n-button>
-          </n-space>
+            </NButton>
+          </NSpace>
         </div>
         <div style="margin-bottom: -20px;">
-          <n-divider>演示账号一键登录</n-divider>
-          <n-space justify="center">
-            <n-button type="primary" size="small" @click="testAccount('admin')">
+          <NDivider>演示账号一键登录</NDivider>
+          <NSpace justify="center">
+            <NButton type="primary" size="small" @click="testAccount('admin')">
               admin
-            </n-button>
-            <n-button size="small" @click="testAccount('test')">
+            </NButton>
+            <NButton size="small" @click="testAccount('test')">
               test
-            </n-button>
-          </n-space>
+            </NButton>
+          </NSpace>
         </div>
-      </n-form>
-      <n-form v-show="formType === 'register'" ref="registerFormRef" :model="registerForm" :rules="registerRules" :show-label="false" class="login-form">
+      </NForm>
+      <NForm v-show="formType === 'register'" ref="registerFormRef" :model="registerForm" :rules="registerRules" :show-label="false" class="login-form">
         <div class="title-container">
           <h3 class="title">
             探索从这里开始! 🚀
           </h3>
         </div>
         <div>
-          <n-form-item path="account">
-            <n-input v-model:value="registerForm.account" size="large" placeholder="用户名" tabindex="1">
+          <NFormItem path="account">
+            <NInput v-model:value="registerForm.account" size="large" placeholder="用户名" tabindex="1">
               <template #prefix>
-                <svg-icon name="ri:user-3-fill" />
+                <SvgIcon name="ri:user-3-fill" />
               </template>
-            </n-input>
-          </n-form-item>
-          <n-form-item path="captcha">
-            <n-input-group>
-              <n-input v-model:value="registerForm.captcha" size="large" placeholder="验证码" tabindex="2">
+            </NInput>
+          </NFormItem>
+          <NFormItem path="captcha">
+            <NInputGroup>
+              <NInput v-model:value="registerForm.captcha" size="large" placeholder="验证码" tabindex="2">
                 <template #prefix>
-                  <svg-icon name="ic:baseline-verified-user" />
+                  <SvgIcon name="ic:baseline-verified-user" />
                 </template>
-              </n-input>
-              <n-button size="large">
+              </NInput>
+              <NButton size="large">
                 发送验证码
-              </n-button>
-            </n-input-group>
-          </n-form-item>
-          <n-form-item path="password">
-            <n-input v-model:value="registerForm.password" type="password" show-password-on="click" size="large" placeholder="密码" tabindex="3">
+              </NButton>
+            </NInputGroup>
+          </NFormItem>
+          <NFormItem path="password">
+            <NInput v-model:value="registerForm.password" type="password" show-password-on="click" size="large" placeholder="密码" tabindex="3">
               <template #prefix>
-                <svg-icon name="ri:lock-2-fill" />
+                <SvgIcon name="ri:lock-2-fill" />
               </template>
-            </n-input>
-          </n-form-item>
-          <n-form-item path="checkPassword">
-            <n-input v-model:value="registerForm.checkPassword" type="password" show-password-on="click" size="large" placeholder="确认密码" tabindex="4">
+            </NInput>
+          </NFormItem>
+          <NFormItem path="checkPassword">
+            <NInput v-model:value="registerForm.checkPassword" type="password" show-password-on="click" size="large" placeholder="确认密码" tabindex="4">
               <template #prefix>
-                <svg-icon name="ri:lock-2-fill" />
+                <SvgIcon name="ri:lock-2-fill" />
               </template>
-            </n-input>
-          </n-form-item>
+            </NInput>
+          </NFormItem>
         </div>
-        <n-button :loading="loading" type="primary" size="large" style="width: 100%; margin-top: 20px;" @click.prevent="handleRegister">
+        <NButton :loading="loading" type="primary" size="large" style="width: 100%; margin-top: 20px;" @click.prevent="handleRegister">
           注册
-        </n-button>
+        </NButton>
         <div class="sub-link">
-          <n-space justify="center">
+          <NSpace justify="center">
             <span class="text">已经有帐号?</span>
-            <n-button text type="primary" @click="formType = 'login'">
+            <NButton text type="primary" @click="formType = 'login'">
               去登录
-            </n-button>
-          </n-space>
+            </NButton>
+          </NSpace>
         </div>
-      </n-form>
-      <n-form v-show="formType === 'reset'" ref="resetFormRef" :model="resetForm" :rules="resetRules" :show-label="false" class="login-form">
+      </NForm>
+      <NForm v-show="formType === 'reset'" ref="resetFormRef" :model="resetForm" :rules="resetRules" :show-label="false" class="login-form">
         <div class="title-container">
           <h3 class="title">
             忘记密码了? 🔒
           </h3>
         </div>
         <div>
-          <n-form-item path="account">
-            <n-input v-model:value="resetForm.account" size="large" placeholder="用户名" tabindex="1">
+          <NFormItem path="account">
+            <NInput v-model:value="resetForm.account" size="large" placeholder="用户名" tabindex="1">
               <template #prefix>
-                <svg-icon name="ri:user-3-fill" />
+                <SvgIcon name="ri:user-3-fill" />
               </template>
-            </n-input>
-          </n-form-item>
-          <n-form-item path="captcha">
-            <n-input-group>
-              <n-input v-model:value="resetForm.captcha" size="large" placeholder="验证码" tabindex="2">
+            </NInput>
+          </NFormItem>
+          <NFormItem path="captcha">
+            <NInputGroup>
+              <NInput v-model:value="resetForm.captcha" size="large" placeholder="验证码" tabindex="2">
                 <template #prefix>
-                  <svg-icon name="ic:baseline-verified-user" />
+                  <SvgIcon name="ic:baseline-verified-user" />
                 </template>
-              </n-input>
-              <n-button size="large">
+              </NInput>
+              <NButton size="large">
                 发送验证码
-              </n-button>
-            </n-input-group>
-          </n-form-item>
-          <n-form-item path="newPassword">
-            <n-input v-model:value="resetForm.newPassword" type="password" show-password-on="click" size="large" placeholder="新密码" tabindex="3">
+              </NButton>
+            </NInputGroup>
+          </NFormItem>
+          <NFormItem path="newPassword">
+            <NInput v-model:value="resetForm.newPassword" type="password" show-password-on="click" size="large" placeholder="新密码" tabindex="3">
               <template #prefix>
-                <svg-icon name="ri:lock-2-fill" />
+                <SvgIcon name="ri:lock-2-fill" />
               </template>
-            </n-input>
-          </n-form-item>
+            </NInput>
+          </NFormItem>
         </div>
-        <n-button :loading="loading" type="primary" size="large" style="width: 100%; margin-top: 20px;" @click.prevent="handleReset">
+        <NButton :loading="loading" type="primary" size="large" style="width: 100%; margin-top: 20px;" @click.prevent="handleReset">
           确认
-        </n-button>
+        </NButton>
         <div class="sub-link">
-          <n-button text type="primary" @click="formType = 'login'">
+          <NButton text type="primary" @click="formType = 'login'">
             去登录
-          </n-button>
+          </NButton>
         </div>
-      </n-form>
+      </NForm>
     </div>
     <Copyright />
   </div>

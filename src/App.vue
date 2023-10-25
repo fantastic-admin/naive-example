@@ -70,9 +70,9 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
 </script>
 
 <template>
-  <n-config-provider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
-    <n-message-provider>
-      <router-view
+  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
+    <NMessageProvider>
+      <RouterView
         v-slot="{ Component, route }"
         :style="{
           '--g-main-sidebar-actual-width': mainSidebarActualWidth,
@@ -80,10 +80,10 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
         }"
       >
         <component :is="Component" v-if="auth(route.meta.auth ?? '')" />
-        <not-allowed v-else />
-      </router-view>
-      <system-info />
-      <n-global-style />
-    </n-message-provider>
-  </n-config-provider>
+        <NotAllowed v-else />
+      </RouterView>
+      <SystemInfo />
+      <NGlobalStyle />
+    </NMessageProvider>
+  </NConfigProvider>
 </template>
