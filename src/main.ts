@@ -40,7 +40,7 @@ app.use(Message)
 app.use(pinia)
 app.use(router)
 directive(app)
-if (icons.useType === 'offline') {
+if (icons.isOfflineUse) {
   for (const info of icons.collections) {
     downloadAndInstall(info)
   }

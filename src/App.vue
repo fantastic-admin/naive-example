@@ -71,7 +71,7 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
 
 <template>
   <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
-    <NMessageProvider>
+    <n-message-provider>
       <RouterView
         v-slot="{ Component, route }"
         :style="{
@@ -83,7 +83,7 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
         <NotAllowed v-else />
       </RouterView>
       <SystemInfo />
-      <NGlobalStyle />
-    </NMessageProvider>
+      <n-global-style />
+    </n-message-provider>
   </NConfigProvider>
 </template>

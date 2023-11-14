@@ -29,7 +29,7 @@ export default defineConfig<Theme>({
         returnCss.push(lightRoots.map(root => `${root}{${lightCss}}`).join(''))
         // 暗黑主题
         const darkCss = entriesToCss(Object.entries(darkTheme))
-        const darkRoots = toArray([`html.dark *,html.dark ::before,html.dark ::after`, `html.dark ::backdrop`])
+        const darkRoots = toArray([`html.dark,html.dark *,html.dark ::before,html.dark ::after`, `html.dark ::backdrop`])
         returnCss.push(darkRoots.map(root => `${root}{${darkCss}}`).join(''))
 
         return returnCss.join('')

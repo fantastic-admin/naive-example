@@ -1,6 +1,7 @@
 import { hex2rgba } from '@unocss/preset-mini/utils'
 
 export const lightTheme = {
+  'color-scheme': 'light',
   // 内置 UI
   '--ui-primary': hex2rgba('#0f0f0f')!.join(' '),
   '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
@@ -35,6 +36,7 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
+  'color-scheme': 'dark',
   // 内置 UI
   '--ui-primary': hex2rgba('#e5e5e5')!.join(' '),
   '--ui-text': hex2rgba('#0f0f0f')!.join(' '),

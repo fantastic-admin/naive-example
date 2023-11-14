@@ -6,11 +6,11 @@ const globalSettings: Settings.all = {
   app: {
     enableAppSetting: true,
   },
-  toolbar: {
-    enableColorScheme: true,
-  },
   layout: {
     enableMobileAdaptation: true,
+  },
+  toolbar: {
+    enableColorScheme: true,
   },
   copyright: {
     enable: true,
