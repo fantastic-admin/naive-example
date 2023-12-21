@@ -1,0 +1,1 @@
+import{d as a,e as r,o as p,H as n,j as o,ak as t,m as l,t as i,V as m,W as c}from"./index-rtSnovnk.js";const f=a({__name:"HTooltip",props:{text:{default:""}},setup(d){return(e,_)=>{const s=r("VTooltip");return p(),n(s,m(c(e.$attrs)),{popper:o(()=>[t(e.$slots,"text",{},()=>[l(i(e.text),1)])]),default:o(()=>[t(e.$slots,"default")]),_:3},16)}}});export{f as _};
