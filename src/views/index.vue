@@ -183,7 +183,7 @@ const pagination = {
 
 <template>
   <div>
-    <PageHeader>
+    <FaPageHeader>
       <template #title>
         <div class="flex items-center gap-4">
           欢迎使用 Fantastic-admin
@@ -194,8 +194,8 @@ const pagination = {
           本演示站基于 Fantastic-admin 源码开发，将 Element Plus 替换为 Naive UI ，详细操作步骤请阅读官方文档。
         </div>
       </template>
-    </PageHeader>
-    <PageMain>
+    </FaPageHeader>
+    <FaPageMain>
       <NSpace>
         <NButton>Default</NButton>
         <NButton type="tertiary">
@@ -217,14 +217,14 @@ const pagination = {
           Error
         </NButton>
       </NSpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NSpace vertical>
         <NInput v-model:value="inputValue" type="text" placeholder="基本的 Input" />
         <NInput v-model:value="inputValue1" type="textarea" placeholder="基本的 Textarea" />
       </NSpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NRadioGroup v-model:value="radioValue">
         <NRadio :value="1">
           A
@@ -239,32 +239,32 @@ const pagination = {
           D
         </NRadio>
       </NRadioGroup>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NDatePicker v-model:value="timestamp" type="date" />
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NRate v-model:value="rateValue" />
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NSpace vertical>
         <NSelect v-model:value="selectValue" :options="selectOptions" />
         <NSelect v-model:value="selectValue" disabled :options="selectOptions" />
       </NSpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NSpace vertical>
         <NSlider v-model:value="sliderValue" :step="10" />
         <NInputNumber v-model:value="sliderValue" size="small" />
       </NSpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NSpace>
         <NSwitch v-model:value="switchChecked" />
         <NSwitch v-model:value="switchChecked" disabled />
       </NSpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <NDataTable
         :bordered="false"
         :single-line="false"
@@ -272,6 +272,6 @@ const pagination = {
         :data="data"
         :pagination="pagination"
       />
-    </PageMain>
+    </FaPageMain>
   </div>
 </template>
