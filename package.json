@@ -59,7 +59,7 @@
     "@faker-js/faker": "^9.3.0",
     "@iconify/json": "^2.2.291",
     "@iconify/vue": "^4.3.0",
-    "@stylistic/stylelint-config": "^2.0.0",
+    "@stylistic/stylelint-config": "^3.0.1",
     "@types/nprogress": "^0.2.3",
     "@types/path-browserify": "^1.0.3",
     "@types/qs": "^6.9.17",
